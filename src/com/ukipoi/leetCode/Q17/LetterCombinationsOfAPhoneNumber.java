@@ -11,12 +11,9 @@ public class LetterCombinationsOfAPhoneNumber {
         System.out.println(letterCombinations(str));
     }
 
-    /*
-        在递归时，对于临时的字符串
-     */
-
     /**
-     * 电话号码的字母组合
+     * 电话号码的字母组合，个人看到题目的第一时间就想到了树状图的形式，每一层要添加数字对应字母的节点，然后下一层继续
+     * 很容易就想到了递归的方法，剩下的就是怎么来完成这个递归了。感觉核心要点还是考递归。
      *
      * @param digits 传入的数字字符串
      * @return 所有的字符组合结果
