@@ -1,10 +1,10 @@
-package com.ukipoi.leetCode.Q17;
+package com.ukipoi.leetCode;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class LetterCombinationsOfAPhoneNumber {
+public class Q17_LetterCombinationsOfAPhoneNumber {
 
     public static void main(String[] args) {
         String str = "24794756";
