@@ -26,30 +26,38 @@ public class Q18_4Sum_Ans2 {
             int i1 = numbers.get(i) + numbers.get(numbers.size() - 3) + numbers.get(numbers.size() - 2) + numbers.get(numbers.size() - 1);
             if (target > i1) {
                 continue;
-            } else if (target == i1) {
-                List<Integer> yes = new ArrayList<>();
-                yes.add(numbers.get(i));
-                yes.add(numbers.get(numbers.size() - 3));
-                yes.add(numbers.get(numbers.size() - 2));
-                yes.add(numbers.get(numbers.size() - 1));
-                ret.add(yes);
             }
             for (int j = i + 1; j < numbers.size() - 2; j++) {
                 int i2 = numbers.get(i) + numbers.get(j) + numbers.get(numbers.size() - 2) + numbers.get(numbers.size() - 1);
                 if (target > i2) {
                     continue;
-                } else if (target == i2) {
-                    List<Integer> yes = new ArrayList<>();
-                    yes.add(numbers.get(i));
-                    yes.add(numbers.get(j));
-                    yes.add(numbers.get(numbers.size() - 2));
-                    yes.add(numbers.get(numbers.size() - 1));
-                    ret.add(yes);
                 }
                 //TODO 双指针解题
                 int new_target = target - numbers.get(i) - numbers.get(j);
                 int sup = j + 1;
                 int sub = numbers.size() - 1;
+                while (sup < sub) {
+                    if (new_target > numbers.get(sup) + numbers.get(sub)) {
+                        sup++;
+                    } else if (new_target < numbers.get(sup) + numbers.get(sub)) {
+                        sub--;
+                    } else {
+                        List<Integer> yes = new ArrayList<>();
+                        yes.add(numbers.get(i));
+                        yes.add(numbers.get(j));
+                        yes.add(numbers.get(sub));
+                        yes.add(numbers.get(sup));
+                        ret.add(yes);
+                        while (sup < sub && numbers.get(sup) == numbers.get(sup + 1)) {
+                            sup++;
+                        }
+                        while (sup < sub && numbers.get(sub) == numbers.get(sub - 1)) {
+                            sub--;
+                        }
+                        sup++;
+                        sub--;
+                    }
+                }
             }
         }
         result.addAll(ret);
