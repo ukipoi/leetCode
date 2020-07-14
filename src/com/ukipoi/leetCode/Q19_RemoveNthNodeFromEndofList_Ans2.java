@@ -1,10 +1,7 @@
 package com.ukipoi.leetCode;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Q19_RemoveNthNodeFromEndofList_Ans2 {
-    public static class ListNode {
+    private static class ListNode {
         int val;
         ListNode next;
 
@@ -22,7 +19,7 @@ public class Q19_RemoveNthNodeFromEndofList_Ans2 {
         removeNthFromEnd(listNode, 5);
     }
 
-    public static ListNode removeNthFromEnd(ListNode head, int n) {
+    private static ListNode removeNthFromEnd(ListNode head, int n) {
         if (head == null) {
             return head;
         }

@@ -10,7 +10,7 @@ public class Q18_4Sum {
         System.out.println(fourSum(nums, target));
     }
 
-    public static List<List<Integer>> fourSum(int[] nums, int target) {
+    private static List<List<Integer>> fourSum(int[] nums, int target) {
         List<List<Integer>> result = new ArrayList<>();
         Set<List<Integer>> ret = new HashSet<>();
         List<Integer> numbers = Arrays.stream(nums).sorted().boxed().collect(Collectors.toList());

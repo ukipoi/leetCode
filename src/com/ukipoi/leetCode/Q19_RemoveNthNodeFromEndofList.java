@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Q19_RemoveNthNodeFromEndofList {
-    public static class ListNode {
+    private static class ListNode {
         int val;
         ListNode next;
 
@@ -22,7 +22,7 @@ public class Q19_RemoveNthNodeFromEndofList {
         removeNthFromEnd(listNode, 1);
     }
 
-    public static ListNode removeNthFromEnd(ListNode head, int n) {
+    private static ListNode removeNthFromEnd(ListNode head, int n) {
         List<ListNode> list = new ArrayList<>();
         if (head == null) {
             return head;

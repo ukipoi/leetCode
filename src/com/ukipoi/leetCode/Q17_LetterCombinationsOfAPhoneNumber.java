@@ -18,7 +18,7 @@ public class Q17_LetterCombinationsOfAPhoneNumber {
      * @param digits 传入的数字字符串
      * @return 所有的字符组合结果
      */
-    public static List<String> letterCombinations(String digits) {
+    private static List<String> letterCombinations(String digits) {
         List<String> result = new ArrayList<>();
         if (digits.isEmpty()) {
             return result;
