@@ -28,6 +28,11 @@ public class Q95_UniqueBinarySearchTreesII_Ans2 {
 //        }
     }
 
+    /**
+     * N等于10的时候就体现了差距
+     * @param n 一个0到8的整数
+     * @return 所有可以生成的二叉树
+     */
     private static List<TreeNode> generateTrees(int n) {
         if (n == 0) {
             return new LinkedList<>();
